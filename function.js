@@ -9,7 +9,7 @@ function genPassword() {
     myArr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
   }
 
-  if(charCheck.checked) {
+  if (charCheck.checked) {
     myArr += symbols;
   }
   else {
