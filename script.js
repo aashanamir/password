@@ -13,8 +13,7 @@ let passwrod = "";
   let charCheck = document.getElementById("charCheck");
   let numCheck = document.getElementById("numCheck");
   let btn = document.getElementById("btn");
-
-
+  let copyText = passFeild.value;
 
 
 // Functions
@@ -62,8 +61,12 @@ let passwrod = "";
 
 
 
+btn.addEventListener("click", () => {
+    window.navigator.clipboard.writeText(passFeild.value)
+        .then(() => alert("Password copied to clipboard!"))
+        .catch(err => console.error("Error copying text: ", err));
+});
 
-  //Dom 
-btn.addEventListener("click" , ()=>{
-  window.navigator.clipboard.writeText(passFeild.value);
-})
+
+charCheck.addEventListener("change", addSymb);
+numCheck.addEventListener("change", addNum);
